@@ -18,6 +18,5 @@ cfg-if = "0.1"
 rand_core = { version = "0.6", default-features = false }
 
 [features]
-default = ["zcash"]
+default = ["kzg"]
 kzg = ["ecc/kzg", "secp256k1/kzg"]
-zcash = ["ecc/zcash", "secp256k1/zcash"]

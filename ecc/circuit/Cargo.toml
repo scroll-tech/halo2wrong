@@ -19,6 +19,5 @@ secp256k1 = { path = "../secp256k1/", default-features = true}
 rand_core = { version = "0.6", default-features = false }
 
 [features]
-default = ["zcash"]
+default = ["kzg"]
 kzg = ["integer/kzg"]
-zcash = ["integer/zcash"]

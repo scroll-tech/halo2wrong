@@ -14,21 +14,14 @@ num-traits = "0.2"
 rand = "0.8"
 group = "0.11"
 
-[dependencies.halo2_zcash]
-package = "halo2_proofs"
-git = "https://github.com/zcash/halo2.git"
-version = "0.1.0-beta.2"
-optional = true
-
 [dependencies.halo2_kzg]
 package = "halo2_proofs"
-git = "https://github.com/privacy-scaling-explorations/halo2.git"
-tag = "v2022_06_03"
+git = "https://github.com/scroll-tech/halo2.git"
+branch = "scroll-dev-0607"
 optional = true
 
 [features]
-default = ["zcash"]
-zcash = ["halo2_zcash"]
+default = ["kzg"]
 kzg = ["halo2_kzg"]
 
 

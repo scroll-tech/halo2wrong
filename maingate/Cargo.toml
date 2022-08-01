@@ -15,8 +15,7 @@ cfg-if = "0.1"
 halo2wrong = { path = "../halo2wrong", default-features = false }
 
 [features]
-default = ["zcash"]
-zcash = ["halo2wrong/zcash"]
+default = ["kzg"]
 kzg = ["halo2wrong/kzg"]
 
 [dev-dependencies]
