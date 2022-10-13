@@ -6,7 +6,7 @@ edition = "2021"
 
 [dependencies]
 ecc = { path = "../ecc", default-features = false }
-poseidon = { git = "https://github.com/privacy-scaling-explorations/poseidon.git", branch = "padding" }
+poseidon = { git = "https://github.com/scroll-tech/poseidon.git", branch = "sync-halo2-ecc-1013" }
 group = "0.12"
 subtle = { version = "2.3", default-features = false }
 
