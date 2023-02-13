@@ -14,6 +14,7 @@ use std::{
     cell::RefCell,
     ops::{RangeInclusive, Shl},
 };
+use std::ops::Range;
 
 pub fn modulus<F: FieldExt>() -> big_uint {
     big_uint::from_str_radix(&F::MODULUS[2..], 16).unwrap()
@@ -224,6 +225,14 @@ impl<F: FieldExt> Assignment<F> for DimensionMeasurement {
     }
 
     fn pop_namespace(&mut self, _: Option<String>) {}
+
+    fn fork(&mut self, _ranges: &Vec<Range<usize>>) -> Result<Vec<Self>, Error> {
+        todo!()
+    }
+
+    fn merge(&mut self, _sub_cs: Vec<Self>) -> Result<(), Error> {
+        todo!()
+    }
 }
 
 #[test]
