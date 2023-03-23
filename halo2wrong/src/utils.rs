@@ -12,7 +12,7 @@ use num_bigint::BigUint as big_uint;
 use num_traits::{Num, One, Zero};
 use std::{
     cell::RefCell,
-    ops::{RangeInclusive, Shl},
+    ops::{Range, RangeInclusive, Shl},
 };
 
 pub fn modulus<F: FieldExt>() -> big_uint {
@@ -232,6 +232,14 @@ impl<F: FieldExt> Assignment<F> for DimensionMeasurement {
     }
 
     fn pop_namespace(&mut self, _: Option<String>) {}
+
+    fn fork(&mut self, _: &[Range<usize>]) -> Result<Vec<Self>, Error> {
+        unimplemented!()
+    }
+
+    fn merge(&mut self, _: Vec<Self>) -> Result<(), Error> {
+        unimplemented!()
+    }
 }
 
 #[test]
